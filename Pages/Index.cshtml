@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Araç Listesi</title>
+</head>
+<body>
+    <h2>Araç Listesi</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Marka</th>
+                <th>Renk</th>
+                <th>Yıl</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model.Araclar)
+            {
+                <tr>
+                    <td>@car.Marka</td>
+                    <td>@car.Renk</td>
+                    <td>@car.Yıl</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
